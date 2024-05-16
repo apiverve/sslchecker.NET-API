@@ -70,8 +70,8 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new sslcheckerQueryOptions{
-  url: "https://ebay.com"
+var queryOptions = new sslcheckerQueryOptions {
+  url = "https://ebay.com"
 };
 ```
 
