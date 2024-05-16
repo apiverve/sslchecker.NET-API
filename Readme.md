@@ -71,7 +71,7 @@ Using the API client, you can perform requests to the API.
 
 ```
 var queryOptions = new sslcheckerQueryOptions{
-  "url": "https://ebay.com"
+  url: "https://ebay.com"
 };
 ```
 
