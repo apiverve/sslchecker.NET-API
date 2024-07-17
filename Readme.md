@@ -1,4 +1,4 @@
-SSL Checker API
+SSL Certificate Checker API
 ============
 
 SSL Checker is a simple tool for checking SSL certificates. It returns the SSL certificate details of a website.
@@ -7,7 +7,7 @@ SSL Checker is a simple tool for checking SSL certificates. It returns the SSL c
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [SSL Checker API](https://apiverve.com/marketplace/api/sslchecker)
+This is a .NET Wrapper for the [SSL Certificate Checker API](https://apiverve.com/marketplace/api/sslchecker)
 
 ---
 
@@ -15,17 +15,17 @@ This is a .NET Wrapper for the [SSL Checker API](https://apiverve.com/marketplac
 
 Using the .NET CLI:
 ```
-dotnet add package APIVerve.API.SSLChecker
+dotnet add package APIVerve.API.SSLCertificateChecker
 ```
 
 Using the Package Manager:
 ```
-nuget install APIVerve.API.SSLChecker
+nuget install APIVerve.API.SSLCertificateChecker
 ```
 
 Using the Package Manager Console:
 ```
-Install-Package APIVerve.API.SSLChecker
+Install-Package APIVerve.API.SSLCertificateChecker
 ```
 
 From within Visual Studio:
@@ -33,8 +33,8 @@ From within Visual Studio:
 1. Open the Solution Explorer.
 2. Right-click on a project within your solution.
 3. Click on Manage NuGet Packages...
-4. Click on the Browse tab and search for "APIVerve.API.SSLChecker".
-5. Click on the APIVerve.API.SSLChecker package, select the appropriate version in the right-tab and click Install.
+4. Click on the Browse tab and search for "APIVerve.API.SSLCertificateChecker".
+5. Click on the APIVerve.API.SSLCertificateChecker package, select the appropriate version in the right-tab and click Install.
 
 
 ---
@@ -48,17 +48,17 @@ You can get it by signing up at [https://apiverve.com](https://apiverve.com)
 
 ## Usage
 
-The SSL Checker API documentation is found here: [https://docs.apiverve.com/api/sslchecker](https://docs.apiverve.com/api/sslchecker).  
+The SSL Certificate Checker API documentation is found here: [https://docs.apiverve.com/api/sslchecker](https://docs.apiverve.com/api/sslchecker).  
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-SSL Checker API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+SSL Certificate Checker API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```
 // Create an instance of the API client
-var apiClient = new SSLCheckerAPIClient("[YOUR_API_KEY]", true);
+var apiClient = new SSLCertificateCheckerAPIClient("[YOUR_API_KEY]", true);
 ```
 
 ---
@@ -71,7 +71,7 @@ Using the API client, you can perform requests to the API.
 
 ```
 var queryOptions = new sslcheckerQueryOptions {
-  url = "https://ebay.com"
+  domain = ""
 };
 ```
 
@@ -120,7 +120,8 @@ if(response.error != null) {
     "bits": 2048,
     "valid_from": "Feb 26 00:00:00 2024 GMT",
     "valid_to": "Feb 25 23:59:59 2025 GMT",
-    "serialNumber": "D5072F2C3B21834D34FBB048F9A5DAC0"
+    "serialNumber": "D5072F2C3B21834D34FBB048F9A5DAC0",
+    "domain": "ebay.com"
   }
 }
 ```
