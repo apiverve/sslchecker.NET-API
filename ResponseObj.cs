@@ -78,6 +78,9 @@ public class data
     [JsonProperty("serialNumber")]
     public string serialNumber { get; set; }
 
+    [JsonProperty("domain")]
+    public string domain { get; set; }
+
 }
 
 public class ResponseObj
