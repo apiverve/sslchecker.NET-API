@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new sslcheckerQueryOptions {
+var queryOptions = new SSLCertificateCheckerQueryOptions {
   domain = ""
 };
 ```
@@ -122,7 +122,8 @@ if(response.error != null) {
     "valid_to": "Feb 25 23:59:59 2025 GMT",
     "serialNumber": "D5072F2C3B21834D34FBB048F9A5DAC0",
     "domain": "ebay.com"
-  }
+  },
+  "code": 200
 }
 ```
 
