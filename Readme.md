@@ -32,9 +32,9 @@ From within Visual Studio:
 
 1. Open the Solution Explorer.
 2. Right-click on a project within your solution.
-3. Click on Manage NuGet Packages...
+3. Click on Manage NuGet Packages..
 4. Click on the Browse tab and search for "APIVerve.API.SSLCertificateChecker".
-5. Click on the APIVerve.API.SSLCertificateChecker package, select the appropriate version in the right-tab and click Install.
+5. Click on the APIVerve.API.SSLCertificateChecker package, click Install.
 
 
 ---
@@ -118,9 +118,9 @@ if(response.error != null) {
     },
     "ca": false,
     "bits": 2048,
-    "valid_from": "Feb 26 00:00:00 2024 GMT",
-    "valid_to": "Feb 25 23:59:59 2025 GMT",
-    "serialNumber": "D5072F2C3B21834D34FBB048F9A5DAC0",
+    "valid_from": "Jan  8 00:00:00 2025 GMT",
+    "valid_to": "Jan  8 23:59:59 2026 GMT",
+    "serialNumber": "A89BCEBA167A33593AD3202C7FE2C420",
     "domain": "ebay.com"
   },
   "code": 200
@@ -149,7 +149,7 @@ All usage of the APIVerve website, API, and services is subject to the [APIVerve
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2024 APIVerve, and Evlar LLC
+Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
