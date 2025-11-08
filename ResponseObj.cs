@@ -4,99 +4,106 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class subject
-{
-    [JsonProperty("C")]
-    public string c { get; set; }
+    /// <summary>
+    /// Subject data
+    /// </summary>
+    public class Subject
+    {
+        [JsonProperty("C")]
+        public string C { get; set; }
 
-    [JsonProperty("ST")]
-    public string sT { get; set; }
+        [JsonProperty("ST")]
+        public string ST { get; set; }
 
-    [JsonProperty("O")]
-    public string o { get; set; }
+        [JsonProperty("O")]
+        public string O { get; set; }
 
-    [JsonProperty("CN")]
-    public string cN { get; set; }
+        [JsonProperty("CN")]
+        public string CN { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Issuer data
+    /// </summary>
+    public class Issuer
+    {
+        [JsonProperty("C")]
+        public string C { get; set; }
 
-public class issuer
-{
-    [JsonProperty("C")]
-    public string c { get; set; }
+        [JsonProperty("ST")]
+        public string ST { get; set; }
 
-    [JsonProperty("ST")]
-    public string sT { get; set; }
+        [JsonProperty("L")]
+        public string L { get; set; }
 
-    [JsonProperty("L")]
-    public string l { get; set; }
+        [JsonProperty("O")]
+        public string O { get; set; }
 
-    [JsonProperty("O")]
-    public string o { get; set; }
+        [JsonProperty("CN")]
+        public string CN { get; set; }
 
-    [JsonProperty("CN")]
-    public string cN { get; set; }
+    }
+    /// <summary>
+    /// InfoAccess data
+    /// </summary>
+    public class InfoAccess
+    {
+        [JsonProperty("CA Issuers - URI")]
+        public string[] CAIssuersURI { get; set; }
 
-}
+        [JsonProperty("OCSP - URI")]
+        public string[] OCSPURI { get; set; }
 
-public class infoAccess
-{
-    [JsonProperty("CA Issuers - URI")]
-    public string[] cAIssuersURI { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("subject")]
+        public Subject Subject { get; set; }
 
-    [JsonProperty("OCSP - URI")]
-    public string[] oCSPURI { get; set; }
+        [JsonProperty("issuer")]
+        public Issuer Issuer { get; set; }
 
-}
+        [JsonProperty("subjectaltname")]
+        public string Subjectaltname { get; set; }
 
-public class data
-{
-    [JsonProperty("subject")]
-    public subject subject { get; set; }
+        [JsonProperty("infoAccess")]
+        public InfoAccess InfoAccess { get; set; }
 
-    [JsonProperty("issuer")]
-    public issuer issuer { get; set; }
+        [JsonProperty("ca")]
+        public bool Ca { get; set; }
 
-    [JsonProperty("subjectaltname")]
-    public string subjectaltname { get; set; }
+        [JsonProperty("bits")]
+        public int Bits { get; set; }
 
-    [JsonProperty("infoAccess")]
-    public infoAccess infoAccess { get; set; }
+        [JsonProperty("valid_from")]
+        public string Validfrom { get; set; }
 
-    [JsonProperty("ca")]
-    public bool ca { get; set; }
+        [JsonProperty("valid_to")]
+        public string Validto { get; set; }
 
-    [JsonProperty("bits")]
-    public int bits { get; set; }
+        [JsonProperty("serialNumber")]
+        public string SerialNumber { get; set; }
 
-    [JsonProperty("valid_from")]
-    public string validfrom { get; set; }
+        [JsonProperty("domain")]
+        public string Domain { get; set; }
 
-    [JsonProperty("valid_to")]
-    public string validto { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("serialNumber")]
-    public string serialNumber { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("domain")]
-    public string domain { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
